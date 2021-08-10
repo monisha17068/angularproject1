@@ -32,10 +32,9 @@ sh '$SCANNER_HOME/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=scanner
                 
                sh """
                
-              docker rm angular
-              docker rmi angularangular:1.1
+              
               docker build -t angularangular:1.0 .
-              docker run -d -p 81:80 --name angular angularangular:1.0
+              docker run -d -p 8083:80 angularangular:1.0
                """
        
 }
