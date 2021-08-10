@@ -1,6 +1,14 @@
 pipeline {
     agent any
    
+  environment {
+        
+        NEXUS_VERSION = "nexus3"
+        NEXUS_PROTOCOL = "http"
+        NEXUS_URL = "34.93.225.134"
+        NEXUS_REPOSITORY = "https://github.com/monisha17068/angularproject1.git"
+        NEXUS_CREDENTIAL_ID = "nexus-credentials"
+    }
 
     stages {
         stage('git') {
