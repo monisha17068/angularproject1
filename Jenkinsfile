@@ -67,10 +67,10 @@ sh '$SCANNER_HOME/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=scanner
                 nexusArtifactUploader(
                             nexusVersion: nexus3,
                             protocol: http,
-                            nexusUrl: http://35.244.12.68:8081/,
+                            nexusUrl: http://35.244.12.68:8081/ ,
                             groupId: pom.groupId,
                             version: pom.version,
-                            repository:https://github.com/monisha17068/angularproject1.git,
+                            repository:'https://github.com/monisha17068/angularproject1.git',
                             credentialsId: nexus-credentials,
                             [artifactId: pom.artifactId,
                                 classifier: '',
