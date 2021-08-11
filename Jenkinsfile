@@ -65,13 +65,14 @@ sh '$SCANNER_HOME/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=scanner
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
 
                 nexusArtifactUploader(
-                            nexusVersion: nexus3,
-                            protocol: http,
-                            nexusUrl:'35.244.12.68:8081'/,
+                           nexusArtifactUploader(
+                            nexusVersion: NEXUS_VERSION,
+                            protocol: NEXUS_PROTOCOL,
+                            nexusUrl: NEXUS_URL,
                             groupId: pom.groupId,
                             version: pom.version,
-                            repository:'https://github.com/monisha17068/angularproject1.git',
-                            credentialsId: nexus-credentials,
+                            repository: NEXUS_REPOSITORY,
+                            credentialsId: NEXUS_CREDENTIAL_ID,
                             [artifactId: pom.artifactId,
                                 classifier: '',
                                 file: "pom.xml",
