@@ -84,6 +84,7 @@ sh '$SCANNER_HOME/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=scanner
                     }
                 }
 }
+      }
  post {
         always {
             
