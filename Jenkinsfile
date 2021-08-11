@@ -71,7 +71,7 @@ sh '$SCANNER_HOME/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=scanner
                                 classifier: '',
                                 file: "pom.xml",
                                 type: "pom"]
-                            
+                            ]
                         );
 
                     } else {
