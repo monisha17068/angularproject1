@@ -34,20 +34,7 @@ sh '$SCANNER_HOME/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=scanner
                
             }
         }
-        
-         stage('docker') {
-            steps {
-                
-               sh """
-               
-              
-             docker build -t angular:1.0 .
-              docker run -d -p 8083:80 angular:1.0
-               """
-       
-}
-}
-      stage("publish to nexus") {
+        stage("publish to nexus") {
             steps {
                 script {
                    
@@ -83,6 +70,20 @@ sh '$SCANNER_HOME/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=scanner
                         error "*** File: ${artifactPath}, could not be found";
                     }
                 }
+            }
+        }
+        
+         stage('docker') {
+            steps {
+                
+               sh """
+               
+              
+             docker build -t angular:1.0 .
+              docker run -d -p 8083:80 angular:1.0
+               """
+
+    
 }
       }
  
