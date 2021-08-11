@@ -72,7 +72,7 @@ sh '$SCANNER_HOME/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=scanner
                                 file: "pom.xml",
                                 type: "pom"]
                             ]
-                        );
+                        )
 
                     } else {
                         error "*** File: ${artifactPath}, could not be found";
