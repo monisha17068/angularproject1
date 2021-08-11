@@ -79,7 +79,7 @@ sh '$SCANNER_HOME/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=scanner
                     }
                 }
             }
-        }
+        
        
          stage('docker') {
             steps {
@@ -90,7 +90,7 @@ sh '$SCANNER_HOME/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=scanner
              docker build -t angular:1.0 .
               docker run -d -p 8083:80 angular:1.0
                """
-
+            }
     
 }
       }
