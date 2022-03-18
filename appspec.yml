@@ -1,8 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: server.js
-    destination: /var/www/
+  - source: /index.html
+    destination: /var/www/html/
+    
 hooks:
  ApplicationStart:
     - location: start_server.sh
