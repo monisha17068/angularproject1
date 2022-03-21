@@ -8,4 +8,4 @@ hooks:
  ApplicationStart:
     - location: start_server.sh
       timeout: 300
- 
+      runas: root
